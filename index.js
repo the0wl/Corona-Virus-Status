@@ -4,9 +4,9 @@ const { prefix, token } = require('./config.json')
 
 const client = new Discord.Client()
 
-client.once('ready', () => {
-  console.log('Ready')
-})
+client.setInterval(() => {
+  console.log('status: online')
+}, 5000)
 
 client.on('message', message => {
   //console.log(message.content)
